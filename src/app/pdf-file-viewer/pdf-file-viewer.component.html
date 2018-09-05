@@ -1,0 +1,21 @@
+<div class="pdf-container">
+    <div>
+        <div class="pdf-division">
+            <a (click)="previousPdf()" class="previous-next-button"><img src="assets/images/left.png"></a>
+        </div>
+        <div class="pdf-division">
+            <div>
+                <pdf-viewer (after-load-complete)="callBackFn($event)" [src]="pdfSrc" [render-text]="true" [page]="this.pdfNumber" [show-all]="false"
+                    style="display: block;"></pdf-viewer>
+            </div>
+            <div *ngFor="let count of pdfCount;" style="display: inline-block;">
+                <pdf-viewer *ngIf="count >= 1" [src]="pdfSrc" [render-text]="true" [page]="count" [fit-to-page]="true" [show-all]="false"
+                    style="display: inline-block; width:100px; margin: 10px"></pdf-viewer>
+            </div>
+
+        </div>
+        <div class="pdf-division">
+            <a (click)="nextPdf()" class="previous-next-button"> <img src="assets/images/right.png"></a>
+        </div>
+    </div>
+</div>

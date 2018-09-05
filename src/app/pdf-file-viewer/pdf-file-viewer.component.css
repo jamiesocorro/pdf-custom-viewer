@@ -1,0 +1,19 @@
+:host ::ng-deep .ng2-pdf-viewer-container {
+  height: 100% !important;
+  width: 100% !important;
+  overflow: auto;
+ 
+}
+
+.pdf-container {
+  margin: 0 auto; 
+}
+
+.pdf-division {
+  display: inline-block; 
+  vertical-align: middle
+}
+
+.previous-next-button {
+  cursor: pointer;
+}
