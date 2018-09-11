@@ -1,6 +1,7 @@
 <div class="pdf-container">
     <div>
         <div class="pdf-division">
+            <div class="close-button" (click)="setHide()">X</div>
             <a (click)="previousPdf()" class="previous-next-button"><img src="assets/images/left.png"></a>
         </div>
         <div class="pdf-division">
@@ -9,7 +10,7 @@
                     style="display: block;"></pdf-viewer>
             </div>
             <div *ngFor="let count of pdfCount;" style="display: inline-block;">
-                <pdf-viewer *ngIf="count >= 1" [src]="pdfSrc" [render-text]="true" [page]="count" [fit-to-page]="true" [show-all]="false"
+                <pdf-viewer *ngIf="count >= 1 && count < 10" [src]="pdfSrc" [render-text]="true" [page]="count" [fit-to-page]="true" [show-all]="false"
                     style="display: inline-block; width:100px; margin: 10px"></pdf-viewer>
             </div>
 

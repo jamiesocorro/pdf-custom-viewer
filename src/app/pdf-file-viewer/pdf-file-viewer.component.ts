@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, Output, OnChanges, EventEmitter } from '@angular/core';
 import { PDFDocumentProxy, PDFProgressData } from 'ng2-pdf-viewer';
 
 @Component({
@@ -10,6 +10,11 @@ import { PDFDocumentProxy, PDFProgressData } from 'ng2-pdf-viewer';
 export class PdfFileViewerComponent {
 
     @Input() pdfSrc: string;
+    @Output() onHide = new EventEmitter<boolean>();
+    setHide() {
+        this.onHide.emit(false);
+    }
+
     constructor() {
 
     }

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showPdf = false;
+
+  onHide(val: boolean):void {
+    this.showPdf = val;
+  }
 }

@@ -4,7 +4,14 @@
     Welcome to my PDF custom viewer!
   </h1>
 
-  <pdf-file-viewer pdfSrc="assets/pdf/sample.pdf"></pdf-file-viewer>
+  <div [hidden]="!showPdf" class="overlay">
+    <pdf-file-viewer pdfSrc="assets/pdf/sample.pdf" (onHide)="onHide($event)"></pdf-file-viewer>
+  </div>
+
+  <div>
+    <div class="pdfButton" (click)="showPdf = true">
+      <span class="pdfLabel">show PDF</span>
+    </div>
+  </div>
 
 </div>
-
