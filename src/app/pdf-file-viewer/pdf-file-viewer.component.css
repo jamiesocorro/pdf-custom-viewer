@@ -15,6 +15,14 @@
   vertical-align: middle
 }
 
+.pdf-thumbnails {
+  display: inline-block; 
+  width:110px !important; 
+  height: 170px; 
+  margin: 10px;
+  overflow: hidden;
+}
+
 .previous-next-button {
   cursor: pointer;
 }

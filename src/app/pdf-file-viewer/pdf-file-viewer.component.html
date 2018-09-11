@@ -10,8 +10,7 @@
                     style="display: block;"></pdf-viewer>
             </div>
             <div *ngFor="let count of pdfCount;" style="display: inline-block;">
-                <pdf-viewer *ngIf="count >= 1 && count < 10" [src]="pdfSrc" [render-text]="true" [page]="count" [fit-to-page]="true" [show-all]="false"
-                    style="display: inline-block; width:100px; margin: 10px"></pdf-viewer>
+                <pdf-viewer class="pdf-thumbnails" *ngIf="count >= 1 && count < 10" [src]="pdfSrc" [render-text]="true" [page]="count" [fit-to-page]="true" [show-all]="false"></pdf-viewer>
             </div>
 
         </div>
